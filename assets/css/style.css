@@ -1,0 +1,344 @@
+/*parametres generaux*/
+@font-face {
+    font-family: "font-reg"; /*nom generique pour la font de base en regular*/
+    src: url(../assets/fonts/PlayfairDisplay-Regular.ttf);
+}
+
+@font-face {
+    font-family: "font-bold";
+    src: url(../assets/fonts/PlayfairDisplay-ExtraBold.ttf);
+}
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+*::selection{
+background: #704214;
+color: #fefeff;
+}
+
+html {
+    scroll-behavior: smooth; /*attitude cool et legere du scroll*/
+}
+
+body {
+    font-family: "font-reg", serif;
+    background: #704214;
+    color:#fefeff;
+    transition: 0.7s ease-in-out
+}
+
+.wrapper {
+    perspective: 900px;
+}
+
+.appear {
+    opacity: 0;
+    transform: translateY(100%) rotateX(-80deg);
+    transform-origin: top center;
+    transform-style: preserve-3d;
+    transition: 0.8s cubic-bezier(0.215, 0.61, 0.355, 1); /*pour que ce soit fait en douceur*/
+}
+/*qd la classe appear est visible a l'ecran ATTENTION avant il faut ajouter l'element data-scroll au html*/
+
+.appear.is-inview {
+    transition-delay: 0.6s;
+    opacity: 1;
+    transform: none;
+}
+
+h2 {
+    font-size: calc(3rem + 5vw); /*on evite ainsi les mediaqueries en mettant une font size qui s'adapte a 5% du viewport*/
+    text-align: center;
+    color: rgb(217,217,217);
+    font-family: "font-bold", serif; 
+    letter-spacing: 3px;
+}
+
+.title {
+    font-size: calc(1.5rem + 5vw);
+    letter-spacing: 0;
+}
+
+span {
+    display: inline-block; /*display block mais tolere un element a cote*/    
+}
+
+a, a:visited {
+   cursor: pointer;
+   position: relative;
+   text-decoration: none;
+   color: #fefeff;
+   transition: 0.1s linear; 
+   font-size: calc(0.8rem + 0.8vw); /*le premier parametre est la taille minimum pour que ca reste lisible en responsive*/
+}
+
+/*la ligne blanche en dessous*/
+a::after{               
+    content: "";
+    position: absolute;
+    width: 100%;
+    background: #fefeff;
+    height: 1px;
+    bottom: -4px;
+    left: 0;
+    transform-origin: left; /*le depart se fait au centre par defaut*/
+}
+
+a:hover {
+  transform: scale(1.04); /*sur les design modernes faire des effets legers ici seulement 4% */ 
+  color: rgb(217,217,217);
+}
+
+/*l'animation de la ligne sous les liens*/
+a:hover::after {
+    animation: animLink 1.4s infinite ease-in-out;
+}
+@keyframes animLink {
+    50% {
+        transform: scaleX(0.1); /*a 50% de l'animation se reduit jusqua 20% de sa taille */
+    }
+    100% {
+        transform: scaleX(1); /*revient a sa forme initiale*/
+    }
+}
+
+.img {
+    height: 395px;
+    width: 100vw;
+    max-width: 395px;
+    margin: 0 auto;
+    filter: grayscale(100%); /* c'est ce qui va faire l'effet noir et blanc */
+    transition: 1.6s; /*c'est ce qui met du temps a se caler qd on reduit la taille de l'ecran, effet sympa*/
+}
+
+.img:hover {
+    filter: grayscale(10%);
+}
+
+/*Creation des lignes de separation*/
+.line {
+    height: 2px;
+    width: 70%;
+    margin: 0 auto;
+    background: #704214;
+    transition: 1.5s cubic-bezier(0.77, 0, 0.18, 1);
+    transform-origin: left;
+    transition-delay: 0.5s; /*pour pas quelle apparaisse trop vite*/
+    opacity: 0;
+    transform: scaleX(0);
+}
+
+.line-wrapper.is-inview .line{
+    opacity: 1;
+    transform: scaleX(1);
+}
+
+/*parametres par ordre d'apparition*/
+
+header {
+    height: 100vh;
+    position: relative; /*pour pouvoir mettre le please scroll en absolute*/
+    margin: 2vw 2vw 0; /*pour etre toujours adapte a la taille de l'ecran*/
+}
+
+.links {
+    display: flex; /*avec le display flex la scale fonctionne */
+    justify-content: space-between;
+}
+
+h1 {
+    font-size: calc(2rem + 8vw);
+    margin-top: 70px;
+    font-family: "font-bold", serif;
+    letter-spacing: 6px;
+    color: #fefeff;
+}
+#h1-wrapper {
+    transition-delay: 0.3s;
+}
+header h2 {
+    font-size: calc(1rem + 6.5vw);
+    margin: 18px 0;
+    text-align: left;
+}
+
+#h2-1 {
+    transition-delay: 0.9s;
+}
+
+#h2-2 {
+    transition-delay: 1.2s;
+}
+ /*please scroll*/
+ .scroll-wrapper {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%); /*centrage par rapport a son centre et non pas a son debut sinon il est pas au milieu de la page*/
+    bottom: 3.5vw; /*a ce stade il reste pas tout a fait ou je le souhaite mais avec lokomotiv cela sera reajuste*/
+    color: rgb(217,217,217);
+    font-size: calc(0.8rem + 0.5vw);
+ }
+
+ /*About*/
+ /*image a changer*/
+ .about {
+    margin: 400px 0 250px;
+ }
+
+ .img1 {
+    background: url(../assets/img/moi.jpg) top/cover; 
+ }
+ /*Mettre le texte a propos par dessus la photo*/
+ .h2-wrapper {
+    mix-blend-mode: exclusion;
+    margin: -220px 0 200px;
+ }
+
+ .about p {
+    width: 70%;
+    min-width: 250px;
+    text-align: center;
+    margin: 0 auto;
+    line-height: calc(7px + 4.5vw);
+    font-size: calc(1rem + 1vw);
+ }
+
+ /*partie expertise*/
+ .skills {
+    margin: 200px 0 250px;
+ }
+
+ .skills h2 {
+    margin-bottom: 150px;
+ }
+
+ .skills .wrapper {
+    margin: 30px 0;
+ }
+ .skills .appear {
+    text-align: center;
+    transition-delay: 0.6s;
+ }
+ .skills p {
+    font-size: calc(1rem + 6vw);
+    font-family:"font-bold", serif;
+    letter-spacing: 4px;
+    background: #704214;
+    color: #fefeff;
+    display: inline-block;
+    padding: 0 12px 12px; /*en haut gauche droite (en bas si 4eme parametre) */
+ }
+
+ /*effet au survol des images avec reveal*/
+
+ .portfolio {
+    margin: 200px 0;
+ }
+
+ .projects-container {
+    margin-top: 100px;
+ }
+
+ .project {
+    position: relative;
+    width: 60vw;
+    max-width: 600px;
+    margin: 50px 5vw;
+ }
+
+.project::before {
+    content: "";
+    position: absolute;
+    height: 110%;
+    width: 100%;
+    top: -3px;
+    background: #fefeff;
+    transition: width 1s ease-out;
+    transition-delay: 0.85s;
+}
+
+.project.is-inview::before {
+    width: 0;
+}
+
+ #p2 {
+    margin: 0 6vw 0 auto; /*prend toute la place sur la gauche */
+ }
+
+ #p3 {
+    margin-left: 8vw;
+ }
+
+ /*pour que les images des projects respectent ce qu'on a mis en parametre a .project*/
+
+ .project img {
+    transition: 0.4s ease-out;
+    width: 100%; /*100% de la taille de leur parent jusqu'a 600px ou elles arretent de grandir*/
+ }
+
+ /*effet en hover*/
+ 
+ .project:hover img {
+    filter: brightness(20%);
+ }
+ 
+ .project:hover .project-infos { /*lors du hover, son enfant project-infos:*/
+    opacity: 1;
+    transform: translate(0, -50%);
+ }
+
+ .project-infos {
+    position: absolute;
+    top: 50%;
+    transform: translate(-50px, -50%);
+    margin-left: 8vw;
+    transition: 0.4s ease-out;
+    opacity: 0;
+ }
+
+ .project-infos a {
+    font-size: calc(1rem + 3vw);
+ }
+
+ .project-infos p {
+    font-size: 2rem;
+    margin-top: 1.5vw;
+    color: #fefeff;
+ }
+
+/*footer*/
+
+footer {
+    margin: 150px 0 120px;
+}
+
+footer p {
+   font-size: calc(1rem + 2vw);
+   margin: 25px;
+   text-align: center;      
+}
+
+#l2 {
+    transition-delay: 1.2s;
+}
+
+#l3 {
+    transition-delay: 1.6s;
+}
+
+footer a {
+    font-family: "font-bold", serif;
+    color: 
+    #704214;
+    font-size: calc(1rem + 2vw);
+}
+
+
+.img2 {
+    background: url(../assets/img/avec\ vous.jpg) center/cover ;
+    margin-bottom: 100px;
+}
+
