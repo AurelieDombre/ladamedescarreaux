@@ -51,3 +51,11 @@ Mosaïque de sol,
 Mosaïque d'art contemporain,
 Design en mosaïque,
 Mosaïque en céramique,
+
+
+Découvrez mon expertise en mosaïque polygonale sur mesure, où l'art de l'origami mosaïque rencontre la sculpture en carrelage moderne. Mes créations, qu'elles soient 2D ou 3D, redéfinissent l'art mosaïque avec des œuvres d'art contemporaines et des mosaïques décoratives uniques.
+En tant que mosaïste professionnelle et artiste mosaïste, je crée des mosaïques artistiques et des œuvres d'art en mosaïque de luxe, parfaites pour l'intérieur et l'extérieur. Je propose une large gamme de mosaïques polygonales, allant des mosaïques murales aux statues en mosaïque, en passant par des mosaïques personnalisées pour chaque projet.
+Spécialisée dans l'artisanat mosaïque, j'offre des installations de mosaïques sur mesure, alliant savoir-faire artisanal et design innovant. Mes mosaïques en céramique et autres matériaux de haute qualité transforment chaque espace en une galerie d'art.
+
+Que vous recherchiez une mosaïque de décoration ou un design en mosaïque contemporain, mes créations sont conçues pour sublimer tout type de décor. Faites appel à mon expertise de maître mosaïste pour des créations uniques et des mosaïques d'art contemporain qui incarnent le luxe et l'originalité.
+Transformez vos espaces avec des œuvres d'art en mosaïque de qualité supérieure, réalisées par une artisan mosaïste passionnée et créative. Pour un art en carreaux de mosaïque exceptionnel, contactez-moi et donnez vie à vos projets les plus ambitieux.

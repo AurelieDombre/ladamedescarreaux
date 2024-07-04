@@ -20,6 +20,7 @@ color: #fefeff;
 }
 
 html {
+    --titre-h2: #46474c;
     scroll-behavior: smooth; /*attitude cool et legere du scroll*/
 }
 
@@ -52,7 +53,7 @@ body {
 h2 {
     font-size: calc(3rem + 5vw); /*on evite ainsi les mediaqueries en mettant une font size qui s'adapte a 5% du viewport*/
     text-align: center;
-    color: rgb(217,217,217);
+    color: var(--titre-h2);
     font-family: "font-bold", serif; 
     letter-spacing: 3px;
 }
@@ -326,6 +327,14 @@ footer p {
 }
 
 #l3 {
+    transition-delay: 1.6s;
+}
+
+#l4 {
+    transition-delay: 1.2s;
+}
+
+#l5 {
     transition-delay: 1.6s;
 }
 

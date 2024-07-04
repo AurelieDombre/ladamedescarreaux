@@ -11,7 +11,7 @@ scroll.on("scroll", () => {
     
     if (document.querySelector("#color.is-inview")) {//je selectionne l'element color qui a aussi la classe is-inview (pas d'espace)
                                                     // ce statut est possible grace a la bibliotheque locomotive
-        document.body.style.background = "#000101";   //si l'element est visible alors on garde le background (noir dans ce cas)
+        document.body.style.background = "#704214";   //si l'element est visible alors on garde le background (noir dans ce cas)
         document.body.style.color = "#fefeff";         //et la couleur de la police est blanc (comme prevu a la base)
     } else { //si l'element n'est pas visible alors les couleurs sont inversees
         document.body.style.background = "#fefeff";
