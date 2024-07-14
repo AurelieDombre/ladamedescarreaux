@@ -1,6 +1,7 @@
 /*parametres generaux*/
 @font-face {
-    font-family: "font-reg"; /*nom generique pour la font de base en regular*/
+    font-family: "font-reg";
+    /*nom generique pour la font de base en regular*/
     src: url(../assets/fonts/PlayfairDisplay-Regular.ttf);
 }
 
@@ -9,25 +10,27 @@
     src: url(../assets/fonts/PlayfairDisplay-ExtraBold.ttf);
 }
 
-*{
+* {
     padding: 0;
     margin: 0;
 }
 
-*::selection{
-background: #704214;
-color: #fefeff;
+*::selection {
+    background: #704214;
+    color: #fefeff;
 }
 
 html {
     --titre-h2: #46474c;
-    scroll-behavior: smooth; /*attitude cool et legere du scroll*/
+    scroll-behavior: smooth;
+    --btn_bg: #704214;
+    /*attitude cool et legere du scroll*/
 }
 
 body {
     font-family: "font-reg", serif;
     background: #704214;
-    color:#fefeff;
+    color: #fefeff;
     transition: 0.7s ease-in-out
 }
 
@@ -40,8 +43,10 @@ body {
     transform: translateY(100%) rotateX(-80deg);
     transform-origin: top center;
     transform-style: preserve-3d;
-    transition: 0.8s cubic-bezier(0.215, 0.61, 0.355, 1); /*pour que ce soit fait en douceur*/
+    transition: 0.8s cubic-bezier(0.215, 0.61, 0.355, 1);
+    /*pour que ce soit fait en douceur*/
 }
+
 /*qd la classe appear est visible a l'ecran ATTENTION avant il faut ajouter l'element data-scroll au html*/
 
 .appear.is-inview {
@@ -51,10 +56,11 @@ body {
 }
 
 h2 {
-    font-size: calc(3rem + 5vw); /*on evite ainsi les mediaqueries en mettant une font size qui s'adapte a 5% du viewport*/
+    font-size: calc(3rem + 5vw);
+    /*on evite ainsi les mediaqueries en mettant une font size qui s'adapte a 5% du viewport*/
     text-align: center;
     color: var(--titre-h2);
-    font-family: "font-bold", serif; 
+    font-family: "font-bold", serif;
     letter-spacing: 3px;
 }
 
@@ -64,20 +70,23 @@ h2 {
 }
 
 span {
-    display: inline-block; /*display block mais tolere un element a cote*/    
+    display: inline-block;
+    /*display block mais tolere un element a cote*/
 }
 
-a, a:visited {
-   cursor: pointer;
-   position: relative;
-   text-decoration: none;
-   color: #fefeff;
-   transition: 0.1s linear; 
-   font-size: calc(0.8rem + 0.8vw); /*le premier parametre est la taille minimum pour que ca reste lisible en responsive*/
+a,
+a:visited {
+    cursor: pointer;
+    position: relative;
+    text-decoration: none;
+    color: #fefeff;
+    transition: 0.1s linear;
+    font-size: calc(0.8rem + 0.8vw);
+    /*le premier parametre est la taille minimum pour que ca reste lisible en responsive*/
 }
 
 /*la ligne blanche en dessous*/
-a::after{               
+a::after {
     content: "";
     position: absolute;
     width: 100%;
@@ -85,24 +94,30 @@ a::after{
     height: 1px;
     bottom: -4px;
     left: 0;
-    transform-origin: left; /*le depart se fait au centre par defaut*/
+    transform-origin: left;
+    /*le depart se fait au centre par defaut*/
 }
 
 a:hover {
-  transform: scale(1.04); /*sur les design modernes faire des effets legers ici seulement 4% */ 
-  color: rgb(217,217,217);
+    transform: scale(1.04);
+    /*sur les design modernes faire des effets legers ici seulement 4% */
+    color: rgb(217, 217, 217);
 }
 
 /*l'animation de la ligne sous les liens*/
 a:hover::after {
     animation: animLink 1.4s infinite ease-in-out;
 }
+
 @keyframes animLink {
     50% {
-        transform: scaleX(0.1); /*a 50% de l'animation se reduit jusqua 20% de sa taille */
+        transform: scaleX(0.1);
+        /*a 50% de l'animation se reduit jusqua 20% de sa taille */
     }
+
     100% {
-        transform: scaleX(1); /*revient a sa forme initiale*/
+        transform: scaleX(1);
+        /*revient a sa forme initiale*/
     }
 }
 
@@ -111,8 +126,10 @@ a:hover::after {
     width: 100vw;
     max-width: 395px;
     margin: 0 auto;
-    filter: grayscale(100%); /* c'est ce qui va faire l'effet noir et blanc */
-    transition: 1.6s; /*c'est ce qui met du temps a se caler qd on reduit la taille de l'ecran, effet sympa*/
+    filter: grayscale(100%);
+    /* c'est ce qui va faire l'effet noir et blanc */
+    transition: 1.6s;
+    /*c'est ce qui met du temps a se caler qd on reduit la taille de l'ecran, effet sympa*/
 }
 
 .img:hover {
@@ -127,12 +144,13 @@ a:hover::after {
     background: #704214;
     transition: 1.5s cubic-bezier(0.77, 0, 0.18, 1);
     transform-origin: left;
-    transition-delay: 0.5s; /*pour pas quelle apparaisse trop vite*/
+    transition-delay: 0.5s;
+    /*pour pas quelle apparaisse trop vite*/
     opacity: 0;
     transform: scaleX(0);
 }
 
-.line-wrapper.is-inview .line{
+.line-wrapper.is-inview .line {
     opacity: 1;
     transform: scaleX(1);
 }
@@ -141,12 +159,15 @@ a:hover::after {
 
 header {
     height: 100vh;
-    position: relative; /*pour pouvoir mettre le please scroll en absolute*/
-    margin: 2vw 2vw 0; /*pour etre toujours adapte a la taille de l'ecran*/
+    position: relative;
+    /*pour pouvoir mettre le please scroll en absolute*/
+    margin: 2vw 2vw 0;
+    /*pour etre toujours adapte a la taille de l'ecran*/
 }
 
 .links {
-    display: flex; /*avec le display flex la scale fonctionne */
+    display: flex;
+    /*avec le display flex la scale fonctionne */
     justify-content: space-between;
 }
 
@@ -157,9 +178,11 @@ h1 {
     letter-spacing: 6px;
     color: #fefeff;
 }
+
 #h1-wrapper {
     transition-delay: 0.3s;
 }
+
 header h2 {
     font-size: calc(1rem + 6.5vw);
     margin: 18px 0;
@@ -173,82 +196,90 @@ header h2 {
 #h2-2 {
     transition-delay: 1.2s;
 }
- /*please scroll*/
- .scroll-wrapper {
+
+/*please scroll*/
+.scroll-wrapper {
     position: absolute;
     left: 50%;
-    transform: translateX(-50%); /*centrage par rapport a son centre et non pas a son debut sinon il est pas au milieu de la page*/
-    bottom: 3.5vw; /*a ce stade il reste pas tout a fait ou je le souhaite mais avec lokomotiv cela sera reajuste*/
-    color: rgb(217,217,217);
+    transform: translateX(-50%);
+    /*centrage par rapport a son centre et non pas a son debut sinon il est pas au milieu de la page*/
+    bottom: 3.5vw;
+    /*a ce stade il reste pas tout a fait ou je le souhaite mais avec lokomotiv cela sera reajuste*/
+    color: rgb(217, 217, 217);
     font-size: calc(0.8rem + 0.5vw);
- }
+}
 
- /*About*/
- /*image a changer*/
- .about {
+/*About*/
+/*image a changer*/
+.about {
     margin: 400px 0 250px;
- }
+}
 
- .img1 {
-    background: url(../assets/img/moi.jpg) top/cover; 
- }
- /*Mettre le texte a propos par dessus la photo*/
- .h2-wrapper {
+.img1 {
+    background: url(../assets/img/moi.jpg) top/cover;
+}
+
+/*Mettre le texte a propos par dessus la photo*/
+.h2-wrapper {
     mix-blend-mode: exclusion;
     margin: -220px 0 200px;
- }
+}
 
- .about p {
+.about p {
     width: 70%;
     min-width: 250px;
     text-align: center;
     margin: 0 auto;
     line-height: calc(7px + 4.5vw);
     font-size: calc(1rem + 1vw);
- }
+}
 
- /*partie expertise*/
- .skills {
+/*partie expertise*/
+.skills {
     margin: 200px 0 250px;
- }
+}
 
- .skills h2 {
+.skills h2 {
     margin-bottom: 150px;
- }
+}
 
- .skills .wrapper {
+.skills .wrapper {
     margin: 30px 0;
- }
- .skills .appear {
+}
+
+.skills .appear {
     text-align: center;
     transition-delay: 0.6s;
- }
- .skills p {
+}
+
+.skills p {
     font-size: calc(1rem + 6vw);
-    font-family:"font-bold", serif;
+    font-family: "font-bold", serif;
     letter-spacing: 4px;
     background: #704214;
     color: #fefeff;
     display: inline-block;
-    padding: 0 12px 12px; /*en haut gauche droite (en bas si 4eme parametre) */
- }
+    padding: 0 12px 12px;
+    /*en haut gauche droite (en bas si 4eme parametre) */
+}
 
- /*effet au survol des images avec reveal*/
+/*effet au survol des images avec reveal*/
 
- .portfolio {
-    margin: 200px 0;
- }
+.portfolio {
+    margin: 100px 0;
+}
 
- .projects-container {
+.projects-container {
     margin-top: 100px;
- }
+    margin-bottom: 100px;
+}
 
- .project {
+.project {
     position: relative;
     width: 60vw;
     max-width: 600px;
     margin: 50px 5vw;
- }
+}
 
 .project::before {
     content: "";
@@ -265,61 +296,144 @@ header h2 {
     width: 0;
 }
 
- #p2 {
-    margin: 0 6vw 0 auto; /*prend toute la place sur la gauche */
- }
+#p2 {
+    margin: 0 6vw 0 auto;
+    /*prend toute la place sur la gauche */
+}
 
- #p3 {
+#p3 {
     margin-left: 8vw;
- }
+}
 
- /*pour que les images des projects respectent ce qu'on a mis en parametre a .project*/
+#p4 {
+    margin: auto;
+}
 
- .project img {
+/*pour que les images des projects respectent ce qu'on a mis en parametre a .project*/
+
+.project img {
     transition: 0.4s ease-out;
-    width: 100%; /*100% de la taille de leur parent jusqu'a 600px ou elles arretent de grandir*/
- }
+    width: 100%;
+    /*100% de la taille de leur parent jusqu'a 600px ou elles arretent de grandir*/
+}
 
- /*effet en hover*/
- 
- .project:hover img {
+/*effet en hover*/
+
+.project:hover img {
     filter: brightness(20%);
- }
- 
- .project:hover .project-infos { /*lors du hover, son enfant project-infos:*/
+}
+
+.project:hover .project-infos {
+    /*lors du hover, son enfant project-infos:*/
     opacity: 1;
     transform: translate(0, -50%);
- }
+}
 
- .project-infos {
+.project-infos {
     position: absolute;
     top: 50%;
     transform: translate(-50px, -50%);
     margin-left: 8vw;
     transition: 0.4s ease-out;
     opacity: 0;
- }
+}
 
- .project-infos a {
+.project-infos a {
     font-size: calc(1rem + 3vw);
- }
+}
 
- .project-infos p {
+.project-infos p {
     font-size: 2rem;
     margin-top: 1.5vw;
     color: #fefeff;
- }
+}
+
+
+.wrap_link_galerie {
+    /* margin: 2vw; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.cta {
+    position: relative;
+    margin: auto;
+    padding: 19px 22px;
+    transition: all 0.2s ease;
+}
+
+.cta:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    border-radius: 28px;
+    background: #704214;
+    width: 56px;
+    height: 56px;
+    transition: all 0.3s ease;
+}
+
+.cta span {
+    position: relative;
+    color: #111;
+    font-size: 16px;
+    line-height: 18px;
+    font-weight: 900;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    vertical-align: middle;
+}
+
+.cta svg {
+    position: relative;
+    top: 0;
+    margin-left: 10px;
+    fill: none;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke: #111;
+    stroke-width: 2;
+    transform: translateX(-5px);
+    transition: all 0.3s ease;
+}
+
+.cta:hover:before {
+    width: 100%;
+    background: #704214;
+}
+
+.cta:hover svg {
+    transform: translateX(0);
+}
+
+.cta:active {
+    transform: scale(0.96);
+}
+
 
 /*footer*/
 
 footer {
-    margin: 150px 0 120px;
+    /* margin: 150px 0 120px; */
+    height: 100%;
 }
 
 footer p {
-   font-size: calc(1rem + 2vw);
-   margin: 25px;
-   text-align: center;      
+    font-size: calc(1rem + 2vw);
+    margin: 25px;
+    text-align: center;
+}
+
+.wrapper_appear_p b{
+    color: #704214 ;
+}
+
+#e-mail{
+
 }
 
 #l2 {
@@ -340,14 +454,25 @@ footer p {
 
 footer a {
     font-family: "font-bold", serif;
-    color: 
-    #704214;
+    color: #704214;
     font-size: calc(1rem + 2vw);
 }
 
 
 .img2 {
-    background: url(../assets/img/avec\ vous.jpg) center/cover ;
+    background: url(/assets/img/pictures/sara-carlin.jpg) center/cover;
     margin-bottom: 100px;
 }
 
+.social-media {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 2%;
+    margin-bottom: 4%;
+}
+
+#facebook{
+
+}
