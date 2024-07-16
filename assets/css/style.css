@@ -22,6 +22,7 @@
 
 html {
     --titre-h2: #46474c;
+    --titre-header-h2: #eec7a1 ;
     scroll-behavior: smooth;
     --btn_bg: #704214;
     /*attitude cool et legere du scroll*/
@@ -29,7 +30,8 @@ html {
 
 body {
     font-family: "font-reg", serif;
-    background: #704214;
+    background-image: url(/assets/img/materiaux/coupe.jpeg);
+    opacity: 2;
     color: #fefeff;
     transition: 0.7s ease-in-out
 }
@@ -53,6 +55,15 @@ body {
     transition-delay: 0.6s;
     opacity: 1;
     transform: none;
+}
+
+header h2 {
+    font-size: calc(3rem + 5vw);
+    /*on evite ainsi les mediaqueries en mettant une font size qui s'adapte a 5% du viewport*/
+    text-align: center;
+    color: var(--titre-header-h2);
+    font-family: "font-bold", serif;
+    letter-spacing: 3px;
 }
 
 h2 {
@@ -236,7 +247,7 @@ header h2 {
 
 /*partie expertise*/
 .skills {
-    margin: 200px 0 250px;
+    margin: 150px 0 150px;
 }
 
 .skills h2 {
@@ -266,7 +277,7 @@ header h2 {
 /*effet au survol des images avec reveal*/
 
 .portfolio {
-    margin: 100px 0;
+    margin: 90px 0;
 }
 
 .projects-container {
@@ -418,8 +429,8 @@ header h2 {
 /*footer*/
 
 footer {
-    /* margin: 150px 0 120px; */
-    height: 100%;
+    
+    
 }
 
 footer p {
@@ -441,11 +452,11 @@ footer p {
 }
 
 #l3 {
-    transition-delay: 1.6s;
+    transition-delay: 1.4s;
 }
 
 #l4 {
-    transition-delay: 1.2s;
+    transition-delay: 1.5s;
 }
 
 #l5 {
@@ -461,7 +472,7 @@ footer a {
 
 .img2 {
     background: url(/assets/img/pictures/sara-carlin.jpg) center/cover;
-    margin-bottom: 100px;
+    margin-bottom: 3rem;
 }
 
 .social-media {
