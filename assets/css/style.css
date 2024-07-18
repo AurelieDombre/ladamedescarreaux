@@ -223,11 +223,14 @@ header h2 {
 /*About*/
 /*image a changer*/
 .about {
-    margin: 400px 0 250px;
+    margin: 400px 0 150px;
 }
 
 .img1 {
-    background: url(../assets/img/moi.jpg) top/cover;
+    background: url(/assets/img/logos/LOGO_Ladamedescarreaux.png) top/cover;
+    width: 75%;
+    opacity: 0.4;
+    margin-bottom: 3%;
 }
 
 /*Mettre le texte a propos par dessus la photo*/
@@ -243,8 +246,17 @@ header h2 {
     margin: 0 auto;
     line-height: calc(7px + 4.5vw);
     font-size: calc(1rem + 1vw);
+    padding: 2%;
 }
-
+.about_block{
+    display: flex;
+    flex-direction: column;
+}
+.about_img_p{
+    width: 30%;
+    margin: auto;
+    padding: 2%;
+}
 /*partie expertise*/
 .skills {
     margin: 150px 0 150px;
