@@ -2,12 +2,12 @@
 @font-face {
     font-family: "font-reg";
     /*nom generique pour la font de base en regular*/
-    src: url(../assets/fonts/PlayfairDisplay-Regular.ttf);
+    src: url(/assets/fonts/Caveat-Regular.ttf);
 }
 
 @font-face {
     font-family: "font-bold";
-    src: url(../assets/fonts/PlayfairDisplay-ExtraBold.ttf);
+    src: url(/assets/fonts/Caveat-Bold.ttf);
 }
 
 * {
