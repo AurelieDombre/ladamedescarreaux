@@ -36,6 +36,18 @@ body {
     transition: 0.7s ease-in-out
 }
 
+/* NAV */
+
+.navbar-brand{
+    width: 10%;
+}
+
+.navbar-toggler{
+    background-color: #704214;
+    border: #eec7a1;
+}
+/* NAV */
+
 .wrapper {
     perspective: 900px;
 }
@@ -85,52 +97,8 @@ span {
     /*display block mais tolere un element a cote*/
 }
 
-a,
-a:visited {
-    cursor: pointer;
-    position: relative;
-    text-decoration: none;
-    color: #fefeff;
-    transition: 0.1s linear;
-    font-size: calc(0.8rem + 0.8vw);
-    /*le premier parametre est la taille minimum pour que ca reste lisible en responsive*/
-}
 
-/*la ligne blanche en dessous*/
-a::after {
-    content: "";
-    position: absolute;
-    width: 100%;
-    background: #fefeff;
-    height: 1px;
-    bottom: -4px;
-    left: 0;
-    transform-origin: left;
-    /*le depart se fait au centre par defaut*/
-}
 
-a:hover {
-    transform: scale(1.04);
-    /*sur les design modernes faire des effets legers ici seulement 4% */
-    color: rgb(217, 217, 217);
-}
-
-/*l'animation de la ligne sous les liens*/
-a:hover::after {
-    animation: animLink 1.4s infinite ease-in-out;
-}
-
-@keyframes animLink {
-    50% {
-        transform: scaleX(0.1);
-        /*a 50% de l'animation se reduit jusqua 20% de sa taille */
-    }
-
-    100% {
-        transform: scaleX(1);
-        /*revient a sa forme initiale*/
-    }
-}
 
 .img {
     height: 395px;
@@ -178,7 +146,7 @@ header {
 
 .links {
     display: flex;
-    /*avec le display flex la scale fonctionne */
+    margin-bottom: 25%;
     justify-content: space-between;
 }
 
