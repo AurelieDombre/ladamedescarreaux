@@ -16,7 +16,7 @@
 }
 
 *::selection {
-    background: #704214;
+    background: #b47638;
     color: #fefeff;
 }
 
@@ -42,6 +42,10 @@ body {
     width: 10%;
 }
 
+.navbar-collapse{
+    background-color: #eec7a1;
+}
+
 .navbar-brand img {
     width: 100%;
 }
@@ -52,24 +56,16 @@ body {
 }
 
 @media (min-width: 992px) {
-    .navbar-expand-lg .offcanvas .offcanvas-body {
-        display: flex;
-        flex-grow: 0;
-        padding: 0;
-        overflow-y: visible;
-        font-size: 2rem;
+    .navbar-expand-lg .navbar-nav {
+        flex-direction: row;
+        margin-left: 1rem;
     }
-}
-
-.nav-item{
-    padding: 2%;
 }
 
 /* NAV */
 
 
-a,
-a:visited {
+a{
     cursor: pointer;
     position: relative;
     text-decoration: none;
@@ -79,40 +75,11 @@ a:visited {
     /*le premier parametre est la taille minimum pour que ca reste lisible en responsive*/
 }
 
-/*la ligne blanche en dessous*/
-a::after {
-    content: "";
-    position: absolute;
-    width: 100%;
-    background: #46474c;
-    height: 1px;
-    bottom: -4px;
-    left: 0;
-    transform-origin: left;
-    /*le depart se fait au centre par defaut*/
-}
 
 a:hover {
     transform: scale(1.04);
     /*sur les design modernes faire des effets legers ici seulement 4% */
-    color: rgb(217, 217, 217);
-}
-
-/*l'animation de la ligne sous les liens*/
-a:hover::after {
-    animation: animLink 1.4s infinite ease-in-out;
-}
-
-@keyframes animLink {
-    50% {
-        transform: scaleX(0.1);
-        /*a 50% de l'animation se reduit jusqua 20% de sa taille */
-    }
-
-    100% {
-        transform: scaleX(1);
-        /*revient a sa forme initiale*/
-    }
+    color: #704214;
 }
 
 

@@ -21,22 +21,24 @@ scroll.on("scroll", () => {
 
 
 
-let allGridItems = [...document.getElementsByClassName("grid-item")];
-let popupBg = document.getElementById("popup-bg");
-let popupImg = document.getElementById("popup-img");
+document.addEventListener("DOMContentLoaded", () => {
+    let allGridItems = [...document.getElementsByClassName("grid-item")];
+    let popupBg = document.getElementById("popup-bg");
+    let popupImg = document.getElementById("popup-img");
 
-const openPopup = (e) => {
-    let clickedImageSrc = e.target.src;
-    popupBg.classList.add("active");
-    popupImg.src = clickedImageSrc;
-};
+    const openPopup = (e) => {
+        let clickedImageSrc = e.target.src;
+        console.log('Image clicked:', clickedImageSrc); // Log for debugging
+        popupBg.classList.add("active");
+        popupImg.src = clickedImageSrc;
+    };
 
-const closePopup = () => {
-    popupBg.classList.remove("active");
-};
+    const closePopup = () => {
+        console.log('Popup closed'); // Log for debugging
+        popupBg.classList.remove("active");
+    };
 
-allGridItems.forEach((el) => el.addEventListener("click", openPopup));
-
-popupImg.addEventListener("click", (e) => e.stopPropagation());
-popupBg.addEventListener("click", closePopup);
-
+    allGridItems.forEach((el) => el.addEventListener("click", openPopup));
+    popupImg.addEventListener("click", (e) => e.stopPropagation());
+    popupBg.addEventListener("click", closePopup);
+});
