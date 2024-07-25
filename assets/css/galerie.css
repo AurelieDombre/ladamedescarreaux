@@ -25,15 +25,23 @@ html {
 }
 
 
+
+
 .section {
     display: none;
     padding: 2rem;
 }
 
 @media screen and (min-width: 768px) {
+
+    header{
+        height: 120vh;
+    }
+
     .section {
         padding: 4rem;
     }
+
 }
 
 @supports (display: grid) {
@@ -120,10 +128,14 @@ html {
     grid-column-end: auto;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 398px) {
     .item--full {
         grid-column: 1/-1;
         grid-row-end: span 2;
+    }
+
+    .item__details {
+        font-size: 1rem;
     }
 }
 
@@ -135,5 +147,10 @@ html {
     background: #fff;
     text-transform: capitalize;
     letter-spacing: 1px;
-    font-size: 1.8rem;
+    font-size: 1.3rem;
 }
+
+
+
+
+
