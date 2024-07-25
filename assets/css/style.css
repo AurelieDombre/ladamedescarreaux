@@ -23,6 +23,9 @@
 html {
     --titre-h2: #46474c;
     --titre-header-h2: #eec7a1;
+    --text-color:#797a81;
+    --font-family-reg:"font-reg";
+    --font-family-bold:"font-bold";
     scroll-behavior: smooth;
     --btn_bg: #704214;
     /*attitude cool et legere du scroll*/
@@ -32,7 +35,6 @@ body {
     font-family: "font-reg", serif;
     background-image: url(/assets/img/materiaux/coupe.jpeg);
     opacity: 2;
-    color: #fefeff;
     transition: 0.7s ease-in-out
 }
 
@@ -219,8 +221,8 @@ header h2 {
     /*centrage par rapport a son centre et non pas a son debut sinon il est pas au milieu de la page*/
     bottom: 3.5vw;
     /*a ce stade il reste pas tout a fait ou je le souhaite mais avec lokomotiv cela sera reajuste*/
-    color: rgb(217, 217, 217);
-    font-size: calc(0.8rem + 0.5vw);
+    color: rgb(46, 44, 44);
+    font-size: calc(1rem + 0.8vw);
 }
 
 /*About*/
@@ -250,6 +252,7 @@ header h2 {
     line-height: calc(7px + 4.5vw);
     font-size: calc(1rem + 1vw);
     padding: 2%;
+    color: var(--text-color);
 }
 
 .about_block {
