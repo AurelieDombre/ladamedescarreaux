@@ -210,9 +210,13 @@ header {
     /*pour etre toujours adapte a la taille de l'ecran*/
 }
 
+
+
+
+
 .links {
     display: flex;
-    margin-bottom: 25%;
+    margin-bottom: 15%;
     justify-content: space-between;
 }
 
