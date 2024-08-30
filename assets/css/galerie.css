@@ -73,26 +73,29 @@ html {
     transition: transform 0.3s ease-in-out;
     cursor: pointer;
     counter-increment: item-counter;
+    background-image: url("/assets/img/pictures/hydra.jpeg");
+}
+
+.item:nth-of-type(2n) {
     background-image: url("/assets/img/pictures/baleines.jpeg");
 }
 
-
-.item:nth-of-type(2n) {
+.item:nth-of-type(3n) {
     background-image: url("/assets/img/pictures/lion-terminé.jpg");
 }
 
-.item:nth-of-type(3n) {
+.item:nth-of-type(4n) {
     background-image: url("/assets/img/pictures/loup-fini.jpeg");
 }
 
-.item:nth-of-type(4n) {
+.item:nth-of-type(5n) {
     background-image: url("/assets/img/pictures/Carelin.jpg");
 }
 
-.item:nth-of-type(5n) {
+.item:nth-of-type(6n) {
     background-image: url("/assets/img/pictures/marie-jesus-coloré.jpg");
 }
-.item:nth-of-type(6n) {
+.item:nth-of-type(7n) {
     background-image: url("/assets/img/pictures/perroquet-entier.jpg");
 }
 
