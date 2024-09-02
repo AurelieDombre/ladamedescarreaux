@@ -73,34 +73,34 @@ html {
     transition: transform 0.3s ease-in-out;
     cursor: pointer;
     counter-increment: item-counter;
-    background-image: url("/assets/img/pictures/hydra.jpeg");
+    background-image: url("/ladamedescarreaux/assets/img/pictures/hydra.jpeg");
 }
 
 .item:nth-of-type(2n) {
-    background-image: url("/assets/img/pictures/koi.jpeg");
+    background-image: url("/ladamedescarreaux/assets/img/pictures/koi.jpeg");
 }
 
 .item:nth-of-type(3n) {
-    background-image: url("/assets/img/pictures/baleines.jpeg");
+    background-image: url("/ladamedescarreaux/assets/img/pictures/baleines.jpeg");
 }
 
 .item:nth-of-type(4n) {
-    background-image: url("/assets/img/pictures/lion-terminé.jpg");
+    background-image: url("/ladamedescarreaux/assets/img/pictures/lion-terminé.jpg");
 }
 
 .item:nth-of-type(5n) {
-    background-image: url("/assets/img/pictures/loup-fini.jpeg");
+    background-image: url("/ladamedescarreaux/assets/img/pictures/loup-fini.jpeg");
 }
 
 .item:nth-of-type(6n) {
-    background-image: url("/assets/img/pictures/Carelin.jpg");
+    background-image: url("/ladamedescarreaux/assets/img/pictures/Carelin.jpg");
 }
 
 .item:nth-of-type(7n) {
-    background-image: url("/assets/img/pictures/marie-jesus-coloré.jpg");
+    background-image: url("/ladamedescarreaux/assets/img/pictures/marie-jesus-coloré.jpg");
 }
 .item:nth-of-type(8n) {
-    background-image: url("/assets/img/pictures/perroquet-entier.jpg");
+    background-image: url("/ladamedescarreaux/assets/img/pictures/perroquet-entier.jpg");
 }
 
 .item:after {
