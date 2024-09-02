@@ -2,12 +2,12 @@
 @font-face {
     font-family: "font-reg";
     /*nom generique pour la font de base en regular*/
-    src: url(/ladamedescarreaux/assets/fonts/Caveat-Regular.ttf);
+    src: url(/assets/fonts/Caveat-Regular.ttf);
 }
 
 @font-face {
     font-family: "font-bold";
-    src: url(/ladamedescarreaux/assets/fonts/Caveat-Bold.ttf);
+    src: url(/assets/fonts/Caveat-Bold.ttf);
 }
 
 * {
@@ -265,7 +265,7 @@ header h2 {
 }
 
 .img1 {
-    background: url(/ladamedescarreaux/assets/img/logos/LOGO_Ladamedescarreaux.png) top/cover;
+    background: url(/assets/img/logos/LOGO_Ladamedescarreaux.png) top/cover;
     width: 75%;
     opacity: 0.4;
     margin-bottom: 3%;
@@ -526,7 +526,7 @@ footer a {
 
 
 .img2 {
-    background: url(/ladamedescarreaux/assets/img/pictures/sara-carlin.jpg) center/cover;
+    background: url(/assets/img/pictures/sara-carlin.jpg) center/cover;
     margin-bottom: 3rem;
 }
 
